@@ -1,3 +1,6 @@
+from flask import render_template, request
+from app import app
+
 @app.route("/volunteer", methods=["GET","POST"])
 def volunteer():
 
@@ -12,3 +15,4 @@ def volunteer():
         db.session.commit()
 
         return "Thank you for volunteering!"
+    return render_template("volunteer_form.html")
