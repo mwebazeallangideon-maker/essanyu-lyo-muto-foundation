@@ -1,3 +1,5 @@
+from app import app
+from flask import render_template
 @app.route("/admin/add_news", methods=["GET","POST"])
 def add_news():
 
